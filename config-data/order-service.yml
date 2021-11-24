@@ -37,3 +37,8 @@ resilience4j:
     instances:
       business-service:
         base-config: shared
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
