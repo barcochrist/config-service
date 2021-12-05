@@ -1,5 +1,5 @@
 server:
-  port: 8091
+  port: ${PORT:0}
 
 spring:
   datasource:
@@ -19,3 +19,5 @@ eureka:
   client:
     serviceUrl:
       defaultZone: ${EUREKA_URI:http://localhost:8099/eureka}
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
