@@ -37,6 +37,11 @@ resilience4j:
     instances:
       business-service:
         base-config: shared
+  retry:
+    instances:
+      business-service:
+        maxRetryAttempts: 3
+        waitDuration: 2s
 management:
   endpoints:
     web:
